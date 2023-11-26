@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'qveynebi';
   arr:any [] = []
+  changed:boolean = false
   constructor(private http:HttpClient){
 
   }
@@ -17,9 +18,11 @@ export class AppComponent {
       .subscribe((data:any) =>{
         this.arr = data
         console.log(this.arr)
+        this.changed = true
         
       })
   }
+ 
 
   
 }

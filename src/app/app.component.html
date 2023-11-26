@@ -1,6 +1,6 @@
-<!-- <span class="span1">Choose a country and get information about universities</span> -->
-<!-- <br> -->
-<!-- <br> -->
+<span class="span1">Choose a country and get information about universities</span> 
+<br> 
+ <br>
 <select 
 #country
    (change)="getSelected(country) ">
@@ -10,7 +10,7 @@
   <option value="Germany">Germany</option>
   <option value="Sweden">Sweden</option>
 </select>
-<table >
+<table  *ngIf="changed">
   <tr>
     <th>Country</th>
     <th>Name</th>
